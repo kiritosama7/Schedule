@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="app_gold">#FF7A59</color>
+    <color name="app_white_slight">#FBFBFB</color>
+    <color name="common_text_gray">#999999</color>
+    <color name="common_top_bg">#AE9459</color>
+    <color name="common_tab_btn">#C6AD64</color>
+    <color name="common_char_line">#e5d7b0</color>
+    <color name="common_line_chartview_scal">#bababa</color>
+    <color name="common_point_line">#ECECEC</color>
+    <color name="black">#000000</color>
+
+    <!-- 描边颜色 -->
+    <color name="border_clo">#ccc</color>
+    <color name="text_clo">#333</color>
+    <color name="white">#fff</color>
+    <color name="blue">#419DE4</color>
+
+</resources>

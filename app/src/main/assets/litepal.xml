@@ -1,0 +1,11 @@
+<litepal>
+    <dbname value="subject"/>
+    <version value="10"/>
+    <list>
+        <mapping class="com.dl.schedule.DB.MySubject"/>
+
+        <mapping class="com.dl.schedule.DB.City"/>
+        <mapping class="com.dl.schedule.DB.County"/>
+        <mapping class="com.dl.schedule.DB.Province"/>
+    </list>
+</litepal>

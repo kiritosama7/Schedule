@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/shape_b">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.dl.schedule.linechart.LineChartView
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="210dp"
+                app:dataFactor="1"
+                app:dotRadius="4dp"
+                app:isLinearGradient="true"
+                app:lineColor="@color/colorAccent"
+                app:lineWidth="2dp"
+                app:textColor="@android:color/black" />
+
+            <com.dl.schedule.linechart.LineChartView
+                android:id="@+id/line_chart2"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="210dp"
+                app:dataFactor="500"
+                app:dotRadius="4dp"
+                app:isLinearGradient="true"
+                app:lineColor="@color/colorAccent"
+                app:lineWidth="2dp"
+                app:textColor="@android:color/black" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6690DAFD"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_HWAG"
+                    style="@style/wrap_layout">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:background="#C6E0EE"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/heigh" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="19dp"
+                                    android:text="身高" />
+
+                                <TextView
+                                    android:id="@+id/height"
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="170cm" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginBottom="3dp"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/weight" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:textSize="18dp"
+                                    android:gravity="center"
+                                    android:text="体重" />
+
+                                <TextView
+                                    android:id="@+id/weight"
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="60kg" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:layout_marginRight="3dp"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/age" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center"
+                                    android:textSize="18dp"
+                                    android:text="年龄" />
+
+                                <TextView
+                                    android:id="@+id/age"
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="20岁" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/run" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18dp"
+                                    android:gravity="center"
+                                    android:text="跑步目标" />
+
+                                <TextView
+                                    android:id="@+id/goal"
+                                    style="@style/usertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:text="1000m" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </GridLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6690DAFD"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/wrap_layout">
+                    <!-- 上圆角-->
+                    <LinearLayout
+                        android:id="@+id/gexing"
+                        style="@style/top_layout">
+
+                        <TextView
+                            style="@style/usertext"
+                            android:text="修改信息" />
+
+                        <ImageView style="@style/img_arrow" />
+                    </LinearLayout>
+
+                    <!-- 分割线 -->
+                    <View style="@style/bg_line" />
+
+                    <!-- 下圆角-->
+                    <LinearLayout style="@style/bottom_layout">
+
+                        <TextView
+                            style="@style/usertext"
+                            android:text="意见反馈" />
+
+                        <ImageView style="@style/img_arrow" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

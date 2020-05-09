@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#51B4F5"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="9月"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@id/tv_month"
+                android:text="2017nian"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tv_lunar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_month"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/NowWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/NowTmp"
+                android:text="查看"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/NowTmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:text="天气"
+                android:textAlignment="viewStart"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NowTmp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开学日期:"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <com.necer.view.WeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="#ffffff"
+                app:firstDayOfWeek="monday" />
+        </RelativeLayout>
+
+        <com.necer.calendar.Miui9Calendar
+            android:id="@+id/miui9Calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:bgEmuiCalendarColor="#51B4F5"
+            app:holidayColor="#51B4F5"
+            app:selectCircleColor="#51B4F5"
+            app:pointColor="#FF0000"
+            app:todaySolarTextColor="#51B4F5"
+            app:calendarHeight="300dp"
+            app:defaultCalendar="month"
+            app:firstDayOfWeek="monday">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/subjectButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/shape_b"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:stackFromBottom="true"
+                        android:transcriptMode="alwaysScroll">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@drawable/subject" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center"
+                                    android:layout_marginLeft="1dp"
+                                    android:text="今日课表"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="23dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:src="@drawable/week" />
+
+                                <TextView
+                                    android:id="@+id/nowWeek"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="第1周"
+                                    android:textSize="12dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="5dp"
+                            android:background="#4E4E4E" />
+
+                        <ListView
+                            android:id="@+id/show"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/subjectNone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:text="今天没有课哟！"
+                            android:textSize="18dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginBottom="5dp"
+                            android:background="#4E4E4E" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击查看本周课表"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/shape_b"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:stackFromBottom="true"
+                        android:transcriptMode="alwaysScroll">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日运动" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="5dp"
+                            android:background="#4E4E4E" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/run" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="6"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/nowrun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="1000M"
+                                    android:textColor="#FF8259"
+                                    android:textSize="25dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="/"
+                                    android:textColor="@color/black"
+                                    android:textSize="35dp" />
+
+                                <TextView
+                                    android:id="@+id/aimrun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:text="2000M"
+                                    android:textColor="#777777"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_done" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="@string/factual_scroll_view">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+        </com.necer.calendar.Miui9Calendar>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#00000000">
+
+        <LinearLayout
+            android:id="@+id/rlAddBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="添加日程"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/shape_d"
+                    android:textSize="15sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_cadd"
+                    app:backgroundTint="#1296db"
+                    app:elevation="5dp"
+                    app:fabSize="mini" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ll02"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="开学时间"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/shape_d"
+                    android:textSize="15sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ll02"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_time"
+                    app:backgroundTint="#1296db"
+                    app:elevation="5dp"
+                    app:fabSize="mini" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ll03"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="我的信息"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/shape_d"
+                    android:textSize="15sp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/linechart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ll02"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/perinfo"
+                    app:backgroundTint="#1296db"
+                    app:elevation="5dp"
+                    app:fabSize="mini" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_check"
+            app:backgroundTint="#4558FF">
+
+        </android.support.design.widget.FloatingActionButton>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

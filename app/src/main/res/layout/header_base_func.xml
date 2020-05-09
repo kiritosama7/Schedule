@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="25dp"
+    android:background="@color/app_white_slight">
+
+    <ImageView
+        android:id="@+id/back_subject"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#00000000"
+        android:src="@drawable/back" />
+    <LinearLayout
+        android:id="@+id/id_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程表"
+            android:textColor="@color/app_course_textcolor_blue"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择周次"
+            android:textColor="@color/app_gray"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="38dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#00000000"
+        android:src="@drawable/more" />
+
+</RelativeLayout>
